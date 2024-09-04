@@ -1,6 +1,18 @@
 import requests
 
+""" Validates the given url passed as string.
+    Arguments:
+    url -- String, A valid url should be of form
+    <Protocol>://hostmain>/<fileinfo>
+
+    Protocol = [http, https, ftp]
+    Hostname = string
+    Fileinfo = [.html, .csv, .docx]
+    
+"""
+
 def validate_url(url):
+    
     valid_protocols = ['http', 'https', 'ftp']
     valid_fileinfo = [".html", ".csv", ".docx"]
 
@@ -26,18 +38,5 @@ if __name__ == '__main__':
     url = input("Enter a URL: ")
     print(validate_url(url))
 
-
-
-
-
-    """Validates the given url passed as string.
-    Arguments:
-    url -- String, A valid url should be of form
-    <Protocol>://hostmain>/<fileinfo>
-
-    Protocol = [http, https, ftp]
-    Hostname = string
-    Fileinfo = [.html, .csv, .docx]
-    
-    """
+   
 

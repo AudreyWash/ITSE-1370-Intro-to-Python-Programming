@@ -16,4 +16,4 @@ end_of_string = first_string[-count:].upper()
 # Concatenate the unchanged part and the transformed part
 result = start_of_string + end_of_string
 
-printr(result)
+print(result)

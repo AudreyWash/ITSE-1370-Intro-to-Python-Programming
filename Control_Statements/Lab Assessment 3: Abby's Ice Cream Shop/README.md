@@ -34,16 +34,18 @@ Income:
 
 Analysis:
 
-
+```
 Enter Selection (0 to Exit):
 
 In which the current parameter value is displayed but the user can select and modify each one. For Example:
 
 Enter Selection (0 to Exit): 1
 Enter cost per serving:
+```
 
 Use the following as the default starting values:
 
+```
 serving_cost = 1.00
 labor_rate = 7.50
 shop_rental = 800
@@ -51,3 +53,4 @@ utilities = 150
 advertising = 100
 servings_per_month = 1000
 selling_price = 4.00
+```

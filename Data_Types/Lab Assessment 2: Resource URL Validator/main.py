@@ -37,6 +37,3 @@ def validate_url(url):
 if __name__ == '__main__':
     url = input("Enter a URL: ")
     print(validate_url(url))
-
-   
-

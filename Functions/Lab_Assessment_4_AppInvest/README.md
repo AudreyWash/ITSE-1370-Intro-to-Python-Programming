@@ -1,4 +1,5 @@
 **Scenario**
+
 AppInvest is a mobile application that helps people save money and safely invest in a varied portfolio of investment vehicles. The app has helped thousands of people to accomplish their financial goals. To invest money in the app is simple: you open an account with at least $1,000 and you’re ready to go.
 
 There are a number of investment apps currently available on the market, but AppInvest excels in some areas and offers a better service than its competitors. Some advantages of the app include setting a short-term financial goal to be achieved, as well as immediate access to the user’s funds. The company is planning on releasing a new feature that will enable investors to increase gains depending on the amount invested. In other words, the more money you put in the app, the greater your rate of return. You have been tasked with adding this functionality.

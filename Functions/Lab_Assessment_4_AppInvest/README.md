@@ -16,3 +16,32 @@ For this assessment, you will write a function that for a given invested amount 
 
 In order for you to start this project, we will provide a function template that can be followed to solve this challenge. The code block below is a sample way that this project could be structured.
 
+```
+# global variable
+
+
+def calculate_gains(amount_inv=0.0):
+    """ Calculating the return gains of an investment.
+
+
+    # base amount gain margin
+
+
+    if amount_inv > 1000:
+
+        # check whether the invested amount is greater than the multiplier amount
+
+            # gather the value of the division
+
+
+            # update the `gain_margin` by the multiplier mod
+
+
+        # calculate the total amount of gains
+
+
+        # calculate the total amount plus the gain margin
+
+
+        # return the gains, the full amount and the gain margin
+```

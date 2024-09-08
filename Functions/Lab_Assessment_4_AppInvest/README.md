@@ -45,3 +45,10 @@ def calculate_gains(amount_inv=0.0):
 
         # return the gains, the full amount and the gain margin
 ```
+Create a user-defined function called calculate_gains(), which receives the amount desired to be invested. Outside this function, create a global variable, multiplier_amount that would be accessible at any point in your code to store the "multiplier amount", which will be the amount that would trigger the increase on the gain margin in case the invested amount is greater than this value. In our case, this amount is set to 1 million.
+
+Inside your function, create a variable to store the gain margin, which is 0.1% by default. Also create variables for total_gains and total_amount, setting default values to 0. After these declarations, the first thing to check is whether the amount invested is greater than 1000 (one thousand), which is the minimum application value to start using the app.
+
+Next, check if the amount is greater than the multiplier value (1 million). If it is greater, then update the gain margin variable with the new gain margin and add the estimated amount to the original amount, otherwise just multiply the values to obtain the return on investment for the given amount.
+
+Finally, you need to return the total gains amount, the amount invested updated with the return on investment added to it, as well as the gain margin (the ordering is important for testing purposes). To test your function, enter the following amount: 2000000 ($2 million).

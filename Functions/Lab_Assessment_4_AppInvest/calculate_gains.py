@@ -1,27 +1,29 @@
-# global variable
+# Global variable
+multiplier_amount = 1_000_000
 
 
 def calculate_gains(amount_inv=0.0):
-    """ Calculating the return gains of an investment.
-    
-
-    # base amount gain margin
-    
-
-    if amount_inv > 1000:
-
-        # check whether the invested amount is greater than the multiplier amount
-
-            # gather the value of the division
+    """ Calculate the return gains of an investment. """
+    base_gain_margin = 0.001  # 0.1% base gain margin
+    gain_margin = base_gain_margin
 
 
-            # update the `gain_margin` by the multiplier mod
+    if amount_inv > 1_000:
+        # Calculate additional gain margin based on the investment
+        additional_margin = min((amount_inv // multiplier_amount) * 0.01, 1.0)
+        gain_margin = base_gain_margin + additional_margin
 
 
-        # calculate the total amount of gains
+        # Calculate the total gains
+        total_gains = amount_inv * gain_margin
 
 
-        # calculate the total amount plus the gain margin
+        # Calculate the total amount including gains
+        total_amount = amount_inv + total_gains
 
 
-    # return the gains, the full amount and the gain margin
+        return total_gains, total_amount, gain_margin
+   
+    # If the investment is below the threshold, no gains
+    return 0.0, amount_inv, gain_margin
+

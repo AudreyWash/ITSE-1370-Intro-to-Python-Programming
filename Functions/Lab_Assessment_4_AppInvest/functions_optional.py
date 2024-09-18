@@ -1,12 +1,11 @@
-def format_currency(value, currency='USD'):
-    """This is an auxiliary function to format plain double precision numbers into currency style.
-
-    :param value: the original value to be formatted
-    :param currency: the 3-digits country code to identify the country's currency
+def format_currency(amount):
     """
-    formatted_value =  # formatted value
+    Formats a number as currency with 2 decimal places.
+    :param amount: The amount to be formatted
+    :return: Formatted string
+    """
+    return f"${amount:,.2f}"
 
-    return  # formatted value with 2 decimal places and 3-digits country currency code
 
-
-print(format_currency(100000, 'USD'))
+# Example usage
+print(format_currency(1200.2300001))  # Expected output: "$1,200.23"

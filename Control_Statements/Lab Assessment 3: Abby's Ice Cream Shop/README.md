@@ -1,3 +1,6 @@
+**WARNING: I only received a 76.9 out of 100 on this project. I'm not completely done with the code and I'm unsure of how to fix it right now.**
+
+
 **Scenario**
 
 Abby has always dreamed of having her own ice cream shop. Now as a young entrepreneur she has decided to pursue her dream, but she needs some help in determining the financial viability of her plan. She has come up with a list of income and expense parameters and needs a simple program to input these parameters and calculate the monthly profit or loss as well as performing some variable cost what-if analysis.

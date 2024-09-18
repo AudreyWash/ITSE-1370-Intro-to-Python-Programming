@@ -123,3 +123,102 @@ extra "prints" to output intermediate values to test your algorithms.
 Don't forget to comment your code. It's the perfect time to start a good habit!
 
 """
+
+def calculate_monthly_expenses(serving_cost, labor_rate, shop_rental, utilities, advertising, servings_per_month):
+    labor_hours_per_month = 8 * 6 * 4
+    total_labor_cost = labor_rate * labor_hours_per_month
+    total_serving_cost = serving_cost * servings_per_month
+    total_expenses = total_serving_cost + total_labor_cost + shop_rental + utilities + advertising
+    return round(total_expenses, 2)
+
+def calculate_monthly_income(selling_price, servings_per_month):
+    total_income = selling_price * servings_per_month
+    return round(total_income, 2)
+
+def calculate_profit_or_loss(total_income, total_expenses):
+    profit_or_loss = total_income - total_expenses
+    return round(profit_or_loss, 2)
+
+def what_if_analysis(total_expenses, total_income):
+    print("\nVarying the Expenses From -10% to +10%:")
+    for i in range(-10, 12, 2):
+        varied_expenses = total_expenses * (1 + i / 100)
+        profit_or_loss = calculate_profit_or_loss(total_income, varied_expenses)
+        print(f"Percent: {i}% Expenses: {round(varied_expenses, 2)} Profit/Loss: {profit_or_loss}")
+   
+    print("\nVarying the Income From -10% to +10%:")
+    for i in range(-10, 12, 2):
+        varied_income = total_income * (1 + i / 100)
+        profit_or_loss = calculate_profit_or_loss(varied_income, total_expenses)
+        print(f"Percent: {i}% Income: {round(varied_income, 2)} Profit/Loss: {profit_or_loss}")
+
+def find_break_even_point(serving_cost, labor_rate, shop_rental, utilities, advertising, servings_per_month):
+    selling_price = 0.01
+    while True:
+        total_expenses = calculate_monthly_expenses(serving_cost, labor_rate, shop_rental, utilities, advertising, servings_per_month)
+        total_income = calculate_monthly_income(selling_price, servings_per_month)
+        profit_or_loss = calculate_profit_or_loss(total_income, total_expenses)
+        if profit_or_loss >= 0:
+            return round(selling_price, 2)
+        selling_price += 0.01
+
+def main():
+    serving_cost = 1.00
+    labor_rate = 7.50
+    shop_rental = 800
+    utilities = 150
+    advertising = 100
+    servings_per_month = 1000
+    selling_price = 4.00
+
+    while True:
+        print("\nExpenses:")
+        print(f"1. Cost per serving: {serving_cost}")
+        print(f"2. Labor rate per hour: {labor_rate}")
+        print(f"3. Shop rental per month: {shop_rental}")
+        print(f"4. Utilities per month: {utilities}")
+        print(f"5. Advertising budget per month: {advertising}")
+        print(f"\nIncome:")
+        print(f"6. Selling price (each): {selling_price}")
+        print(f"7. Servings sold per month: {servings_per_month}")
+        print(f"\nAnalysis:")
+        print("8. Profit/Loss Calculation")
+        print("9. What If Analysis with 10% Variance")
+        print("10. Find Break-Even")
+        print("0. Exit")
+
+        choice = int(input("\nEnter Selection (0 to Exit): "))
+
+        if choice == 0:
+            break
+        elif choice == 1:
+            serving_cost = float(input("Enter new cost per serving: "))
+        elif choice == 2:
+            labor_rate = float(input("Enter new labor rate per hour: "))
+        elif choice == 3:
+            shop_rental = float(input("Enter new shop rental per month: "))
+        elif choice == 4:
+            utilities = float(input("Enter new utilities per month: "))
+        elif choice == 5:
+            advertising = float(input("Enter new advertising budget per month: "))
+        elif choice == 6:
+            selling_price = float(input("Enter new selling price (each): "))
+        elif choice == 7:
+            servings_per_month = int(input("Enter new servings sold per month: "))
+        elif choice == 8:
+            total_expenses = calculate_monthly_expenses(serving_cost, labor_rate, shop_rental, utilities, advertising, servings_per_month)
+            total_income = calculate_monthly_income(selling_price, servings_per_month)
+            profit_or_loss = calculate_profit_or_loss(total_income, total_expenses)
+            print(f"\nThe Ice Cream Shop will have a monthly profit/loss of {profit_or_loss} or {round(profit_or_loss / servings_per_month, 2)} per serving.")
+        elif choice == 9:
+            total_expenses = calculate_monthly_expenses(serving_cost, labor_rate, shop_rental, utilities, advertising, servings_per_month)
+            total_income = calculate_monthly_income(selling_price, servings_per_month)
+            what_if_analysis(total_expenses, total_income)
+        elif choice == 10:
+            break_even_price = find_break_even_point(serving_cost, labor_rate, shop_rental, utilities, advertising, servings_per_month)
+            print(f"\nBreak-Even occurs with a selling price of: {break_even_price}")
+        else:
+            print("Invalid selection, please try again.")
+
+if __name__ == "__main__":
+    main()

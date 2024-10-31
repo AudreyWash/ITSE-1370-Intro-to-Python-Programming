@@ -5,5 +5,5 @@ location = {
     "city": "Los Angeles"
 }
 
-Verify the type of the dictionary
+#Verify the type of the dictionary
 print(type(location))

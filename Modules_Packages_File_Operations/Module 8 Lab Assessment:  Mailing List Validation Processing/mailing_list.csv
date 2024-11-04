@@ -1,0 +1,7 @@
+id,email,status
+1,user1@example.com,active
+2,user2@example.com,opt-out
+3,user3@example.com,active
+4,user4@example.com,unsubscribed
+5,user5@jjmail.com,active
+6,user6@example.com,OPT-OUT
